@@ -1,5 +1,7 @@
 package com.hello.world.javacore.design.pattern.creater.series.factory;
 
+import com.hello.world.javacore.design.pattern.creater.series.factory.domain.ChineseFoodA;
+import com.hello.world.javacore.design.pattern.creater.series.factory.domain.ChineseFoodB;
 import com.hello.world.javacore.design.pattern.creater.series.factory.domain.Food;
 
 /**
@@ -9,9 +11,9 @@ public class ChineseFoodFactory implements FooderFactory {
     @Override
     public Food makeFood(String name) {
         if (name.equals("A")){
-            return null;
+            return new ChineseFoodA();
         }else if (name.equals("B")){
-            return null;
+            return new ChineseFoodB();
         }
         return null;
     }
