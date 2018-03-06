@@ -18,7 +18,7 @@ public class AddDate {
         DateFormat formater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(startTime);
-        calendar.add(Calendar.DAY_OF_WEEK,1);
+        calendar.add(Calendar.HOUR,10);
         System.out.println(formater.format(calendar.getTime()));
         System.out.println(calendar.getTime().getTime());
         System.out.println((calendar.getTime().getTime()+"").substring(4,13));
