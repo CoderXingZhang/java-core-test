@@ -9,10 +9,9 @@ import java.util.concurrent.*;
  */
 public class FixedThreadPoolTest2 {
     public static void main(String[] args) {
-//        ExecutorService pool = Executors.newFixedThreadPool(7);
+        ExecutorService pool1 = Executors.newCachedThreadPool();
 
         ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
-
         ExecutorService pool = new ThreadPoolExecutor(3,200,0L,
                 TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<Runnable>(1024),

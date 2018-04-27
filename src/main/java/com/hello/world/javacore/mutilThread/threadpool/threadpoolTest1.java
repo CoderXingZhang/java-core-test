@@ -1,13 +1,13 @@
 package com.hello.world.javacore.mutilThread.threadpool;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @author xing
  */
 public class threadpoolTest1 {
     public static void main(String[] args) {
+//        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,200,1L, TimeUnit.MILLISECONDS,new LinkedBlockingQueue<Runnable>(1024),);
         ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
         for (int i = 0; i < 10; i++) {
             final int index = i;
