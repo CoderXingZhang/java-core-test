@@ -12,22 +12,24 @@ public class ListInit {
         int listSize = 0;
         //除去链表头指针
         head = head.getNext();
-        while (head.hasNext()) {
-            System.out.println(" 第 " + listSize + "个元素为：" + head.getValue());
+        while (head !=null) {
+            System.out.println(" 第 " + listSize + " 个元素为：" + head.getValue());
             listSize++;
             head = head.getNext();
         }
-        System.out.println("最后一个元素为: "+head.getValue());
-        System.out.println("链表的长度为:" + (listSize + 1));
+        System.out.println("链表的长度为:" + (listSize));
 
-        System.out.println(head.getClass().getClassLoader());
+
+        //JVM 累加载相关
+       /* System.out.println(head.getClass().getClassLoader());
         System.out.println(head.getClass().getName());
         Field[] fields = head.getClass().getDeclaredFields();
         for (Field field:fields) {
             System.out.println(field.getName());
-        }
+        }*/
     }
 
+    //链表初始化 长度外为10
     public static ListNode initedList(){
         ListNode head = new ListNode(-1);
         ListNode current = head;
