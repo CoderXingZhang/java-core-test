@@ -1,5 +1,7 @@
 package com.hello.world.javacore.swordToOffer.listnode;
 
+import java.lang.reflect.Field;
+
 /**
  * @author xing
  */
@@ -17,12 +19,18 @@ public class ListInit {
         }
         System.out.println("最后一个元素为: "+head.getValue());
         System.out.println("链表的长度为:" + (listSize + 1));
+
+        System.out.println(head.getClass().getClassLoader());
+        System.out.println(head.getClass().getName());
+        Field[] fields = head.getClass().getDeclaredFields();
+        for (Field field:fields) {
+            System.out.println(field.getName());
+        }
     }
 
     public static ListNode initedList(){
         ListNode head = new ListNode(-1);
         ListNode current = head;
-
         for (int i = 1; i <= 10; i++) {
             ListNode next = new ListNode(i);
             current.setNext(next);
