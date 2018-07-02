@@ -45,10 +45,12 @@ public class ParaTransfor {
         //.forEach(i -> System.out.print(" " + i));
 
         Arrays.stream(res).forEach(i -> System.out.println(" " + i));
+        // 9 10 77
         changeArr(arr);
 
         System.out.println("after change");
         Arrays.stream(arr).forEach(i -> System.out.print(" " + i));
+        //0 8 9 10 0 77 0 0 999 0
 
     }
 
