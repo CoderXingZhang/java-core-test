@@ -52,6 +52,17 @@ public class ParaTransfor {
         Arrays.stream(arr).forEach(i -> System.out.print(" " + i));
         //0 8 9 10 0 77 0 0 999 0
 
+        Integer integer1 = new Integer(999);
+
+
+        System.out.println("\n"+integer1);
+        changInteger(integer1);
+        System.out.println(integer1);
+
+    }
+
+    private static void changInteger(Integer integer1) {
+        integer1 = new Integer(11);
     }
 
     private static void changeArr(int[] arr) {
