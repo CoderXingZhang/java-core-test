@@ -23,9 +23,14 @@ public class reverList {
     public static ListNode reverseList(ListNode head){
         ListNode newHead = new ListNode(-1);
         while (head != null){
+            //获取头结点的下一个结点
             ListNode next = head.getNext();
+
+            /* ++++head的next做临时改变，保存newHead的next信息+++++++*/
             head.setNext(newHead.getNext());
+            // 每次改变newHead的next，将新的head的值及next保存到newHead
             newHead.setNext(head);
+            // 将下一个结点赋值给头结点.
             head = next;
         }
         return newHead.getNext();
